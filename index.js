@@ -32,6 +32,6 @@ io.on("connection", (socket) => {
 
   socket.on("message", (message) => {
     console.log("Mensaje recibido del cliente: %s", message);
-    socket.emit("mensajeServidor", message); 
+    io.emit("mensajeServidor", message); 
   });
 });
